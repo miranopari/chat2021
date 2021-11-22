@@ -11,7 +11,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
   return 'ほ' * n
 
 # アイコンの指定
-BOT_ICON = 'https://2.bp.blogspot.com/-mRJKwyORJkQ/Wn1ZTOBrszI/AAAAAAABKKs/Bg5yjLL9RYwmfUM0pEkBA3Ky3ui0IOZWQCLcBGAs/s800/animal_smile_inu.png'
+BOT_ICON = 'https://1.bp.blogspot.com/-ewJgNRP7M6w/X4aVa5VK2LI/AAAAAAABbuA/IXWqMxGm2dgQcbgLKLrBKOFkc71CN76WwCNcBGAsYHQ/s703/animal_chara_mogura_hakase.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-SC6_6x7MQnc/Wn1ZUkdcPxI/AAAAAAABKK8/qqHVlc8E7lEGsEwJ_J8H6Gp9RvfhTX67wCLcBGAs/s800/animal_smile_neko.png'
 
 def run_chat(chat = chat, start='占いするよ', **kw):

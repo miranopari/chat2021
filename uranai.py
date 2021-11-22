@@ -255,9 +255,9 @@ def myuranai(input_text):
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number = hash(frame['name']+frame['birthday']) % 10
-    if number > 5:
-      return 'あなたの運勢は大吉'
+    number = frame['birthday']
+    if number =='開発職':
+      return '大学院に行こう！'
     return 'あなたの運勢は吉'
 
   return output_text

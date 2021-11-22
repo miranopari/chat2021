@@ -258,7 +258,7 @@ def myuranai(input_text):
     number = frame['okomari']
     if number =='開発職':
       return '大学院に行こう！'
-    return 'あなたの運勢は吉'
+    return frame['okomari']
 
   return output_text
 

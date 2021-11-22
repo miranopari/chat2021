@@ -236,7 +236,7 @@ def run_chat(chat = chat, start='進路にお困りかい？', **kw):
     display_bot(start)
 
 # フレーム 状態をもつ辞書
-# 'name', 'birthday', 'asking'
+# 'name', 'okomari', 'asking'
 frame = {}
 
 def myuranai(input_text):
@@ -249,11 +249,11 @@ def myuranai(input_text):
     frame['asking'] = 'name' # 名前をたずねる  
     return 'あなたの名前は？'
 
-  if 'name' in frame and 'birthday' not in frame:
-    frame['asking'] = 'birthday' # 誕生日をたずねる    
-    return 'あなたの誕生日は？'
+  if 'name' in frame and 'okomari' not in frame:
+    frame['asking'] = 'okomari'   
+    return 'なりたい職種を教えてね！'
 
-  if 'name' in frame and 'birthday' in frame:
+  if 'name' in frame and 'okomari' in frame:
     # 占います
     number = hash(frame['name']+frame['birthday']) % 10
     if number > 5:

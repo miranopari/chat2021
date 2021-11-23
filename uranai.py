@@ -258,7 +258,8 @@ def myuranai(input_text):
     number = str(frame['okomari'])
     if number =='開発職' or number =='研究職':
       return '大学院に行こう！'
-    return number
+    else:
+      return number
 
   return output_text
 

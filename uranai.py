@@ -255,7 +255,7 @@ def myuranai(input_text):
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number = str(frame['okomari'])
+    number = hash(frame['okomari'])
     if number ==2033356463840281892:
       return '大学院に行こう！'
     return number

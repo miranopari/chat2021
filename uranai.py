@@ -255,11 +255,10 @@ def myuranai(input_text):
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number = str(frame['okomari'])
+    number = hash(frame['okomari'])
     if number =='開発職' or number =='研究職':
-      print('大学院へ行こう')
-      #return '大学院に行こう！'
-    #return number
+      return '大学院に行こう！'
+    return number
 
   return output_text
 

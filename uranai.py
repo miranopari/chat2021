@@ -250,12 +250,12 @@ def myuranai(input_text):
     return 'あなたの名前は？'
 
   if 'name' in frame and 'okomari' not in frame:
-    list['asking'] = 'okomari'   
+    frame['asking'] = 'okomari'   
     return 'なりたい職種を教えてね！'
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number =list['okomari']
+    number =list(frame['okomari'])
     if number =='開発職':
       return '大学院に行こう！'
     return number

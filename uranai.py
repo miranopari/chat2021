@@ -255,12 +255,14 @@ def myuranai(input_text):
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number =frame['okomari']
+    number =str(frame['okomari'])
     if number =='開発職':
-      return '大学院に行こう！'
-    return number
-
-  return output_text
+      #return '大学院に行こう！'
+      output_text='大学院に行こう！'
+    else:
+      #return number
+      output_text='就職しよう'
+   return output_text
 
 def start():
   run_chat(chat=myuranai)    

@@ -236,7 +236,7 @@ def run_chat(chat = chat, start='進路にお困りかい？', **kw):
     display_bot(start)
 
 # フレーム 状態をもつ辞書
-# 'name', 'okomari', 'asking'
+# 'name', 'okomari', 'asking','ask','ask1'
 frame = {}
 
 def myuranai(input_text):
@@ -248,21 +248,25 @@ def myuranai(input_text):
   if 'name' not in frame:
     frame['asking'] = 'name' # 名前をたずねる  
     return 'あなたの名前は？'
-
+  
+  if 'name' in frame and 'ask' not in frame:
+    frame['asking'] = 'ask'   
+    return 'いくつか質問に答えてね！今から説明するよ！'
+  
+  if 'name' in frame and 'ask' in frame and 'ask1' not in frame:
+    frame['asking'] = 'ask1'   
+    return '1.全く当てはまれない 2.どちらかというと当てはまらない 3.わからない 4.とちらかというと当てはまる 5.当てはまる　該当する数字で答えてね！'
+  
   if 'name' in frame and 'okomari' not in frame:
     frame['asking'] = 'okomari'   
-    return 'なりたい職種を教えてね！'
+    return 'どれに当てはまる？'
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    number =str(frame['okomari'])
-    if number =='開発職':
-      return '大学院に行こう！'
-      #output_text='大学院に行こう！'
-    else:
-      return number
-      #output_text='就職しよう'
-   return output_text
+    
+    if number > 5:
+      return 'あなたの運勢は大吉'
+    return 'あなたの運勢は吉
 
 def start():
   run_chat(chat=myuranai)    

@@ -257,11 +257,11 @@ def myuranai(input_text):
     # 占います
     number =str(frame['okomari'])
     if number =='開発職':
-      #return '大学院に行こう！'
-      output_text='大学院に行こう！'
+      return '大学院に行こう！'
+      #output_text='大学院に行こう！'
     else:
-      #return number
-      output_text='就職しよう'
+      return number
+      #output_text='就職しよう'
    return output_text
 
 def start():

@@ -2,6 +2,7 @@ import time
 import random
 import IPython
 from google.colab import output
+import math
 
 
 n = 0 
@@ -259,7 +260,7 @@ def myuranai(input_text):
 
   if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います
-    number=hash(frame['okomari'])+1
+    number=int(frame['okomari'])+1
     if number > 5:
       return number
     return number

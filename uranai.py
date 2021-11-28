@@ -251,24 +251,26 @@ def myuranai(input_text):
     frame['asking'] = 'ask'   
     return '1.はい ２.いいえ　数字で僕の質問に答えてね！！'
   
-  if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
+  if 'ask' in frame and 'okomari' not in frame:
     frame['asking'] = 'okomari'  
     return 'アウトドア派'
-  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' not in frame:
+  if 'ask' in frame and'okomari'in frame and'okomari2' not in frame:
     frame['asking'] = 'okomari2'   
     return 'お金がない'
-  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3' not in frame:
+  if 'ask' in frame and'okomari'in frame and'okomari2' in frame and'okomari3' not in frame:
     frame['asking'] = 'okomari3'   
     return '周りの人と予定が合いそう'
-  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
+  if 'ask' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
     frame['asking'] = 'okomari4'   
     return '晴れそう'
   
 
-  if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
+  if 'ask' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' in frame:
     # 占います
     number=int(frame['okomari'])
     number2=int(frame['okomari2'])
+    number3=int(frame['okomari3'])
+    number4=int(frame['okomari4'])
     if number > 5:
       return number
     return number

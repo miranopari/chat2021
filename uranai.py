@@ -266,7 +266,7 @@ def myuranai(input_text):
     
     if number > 5:
       return 'あなたの運勢は大吉'
-    return 'あなたの運勢は吉
+    return 'あなたの運勢は吉'
 
 def start():
   run_chat(chat=myuranai)    

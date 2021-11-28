@@ -245,19 +245,19 @@ def myuranai(input_text):
     frame[frame['asking']] = input_text
     del frame['asking']
   
-  if 'name' in frame and 'ask' not in frame:
+  if 'ask' not in frame:
     frame['asking'] = 'ask'   
     return 'いくつか質問に答えてね！今から説明するよ！'
   
-  if 'name' in frame and 'ask' in frame and 'ask1' not in frame:
+  if 'ask' in frame and 'ask1' not in frame:
     frame['asking'] = 'ask1'   
     return '1.全く当てはまれない 2.どちらかというと当てはまらない 3.わからない 4.とちらかというと当てはまる 5.当てはまる　該当する数字で答えてね！'
   
-  if 'name' in frame and 'okomari' not in frame:
+  if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
     frame['asking'] = 'okomari'   
     return 'どれに当てはまる？'
 
-  if 'name' in frame and 'okomari' in frame:
+  if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います
     number=hash(frame['okomari'])+1
     if number > 5:

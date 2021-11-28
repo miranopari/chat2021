@@ -12,14 +12,14 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
   return 'ほ' * n
 
 # アイコンの指定
-BOT_ICON = 'https://1.bp.blogspot.com/-ewJgNRP7M6w/X4aVa5VK2LI/AAAAAAABbuA/IXWqMxGm2dgQcbgLKLrBKOFkc71CN76WwCNcBGAsYHQ/s703/animal_chara_mogura_hakase.png'
+BOT_ICON = 'https://2.bp.blogspot.com/-3F_IwMqlwqw/WyeOyhtnczI/AAAAAAABMz8/IZqg_8tOhQQELSxPvLp_MbGkAjD9dBKCgCLcBGAs/s800/animal_kawauso_juggling.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-JnZBvcSfDYg/WR_Ky4yQsvI/AAAAAAABEZ0/mk6EeaIWXg4vkKjdnhwnimgJHXC77K2XwCLcB/s800/jibun_sagashi_woman.png'
 
-def run_chat(chat = chat, start='数物科の君にぴったりな進路診断するよ！', **kw):
+def run_chat(chat = chat, start='一緒に楽しい予定考えようね！', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
-      bot_name = kw.get('bot_name', '進路アドバイザー')
+      bot_name = kw.get('bot_name', '君の味方')
       bot_icon = kw.get('bot_icon', BOT_ICON)
       display(IPython.display.HTML(f'''
       <div class="sb-box">
@@ -256,19 +256,19 @@ def myuranai(input_text):
   
   if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
     frame['asking'] = 'okomari'  
-    return '友達作るの得意だ'
+    return '今は忙しい'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' not in frame:
     frame['asking'] = 'okomari2'   
-    return '新しいものが好きだ'
+    return 'お金がない'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3' not in frame:
     frame['asking'] = 'okomari3'   
-    return 'プログラミング好な方だ'
+    return '周りの人と予定が合いそう'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
     frame['asking'] = 'okomari4'   
-    return '愚直に頑張れる'
+    return ''
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' in frame and'okomari5' not in frame:
     frame['asking'] = 'okomari5'   
-    return '就活しんどいぴえん'
+    return ''
 
   if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います

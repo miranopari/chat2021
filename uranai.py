@@ -15,7 +15,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
 BOT_ICON = 'https://1.bp.blogspot.com/-ewJgNRP7M6w/X4aVa5VK2LI/AAAAAAABbuA/IXWqMxGm2dgQcbgLKLrBKOFkc71CN76WwCNcBGAsYHQ/s703/animal_chara_mogura_hakase.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-JnZBvcSfDYg/WR_Ky4yQsvI/AAAAAAABEZ0/mk6EeaIWXg4vkKjdnhwnimgJHXC77K2XwCLcB/s800/jibun_sagashi_woman.png'
 
-def run_chat(chat = chat, start='ぴったりな進路診断するよ！', **kw):
+def run_chat(chat = chat, start='数物科の君にぴったりな進路診断するよ！', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
@@ -252,15 +252,30 @@ def myuranai(input_text):
   
   if 'ask' in frame and 'ask1' not in frame:
     frame['asking'] = 'ask1'   
-    return '1.全く当てはまれない 2.どちらかというと当てはまらない 3.わからない 4.とちらかというと当てはまる 5.当てはまる　該当する数字で答えてね！'
+    return '1.当てはまれない 2.わからない 3.当てはまる　該当する数字で答えてね！'
   
   if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
-    frame['asking'] = 'okomari'   
-    return 'どれに当てはまる？'
+    frame['asking'] = 'okomari'  
+    return '友達作るの得意だ'
+  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' not in frame:
+    frame['asking'] = 'okomari2'   
+    return '新しいものが好きだ'
+  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3' not in frame:
+    frame['asking'] = 'okomari3'   
+    return 'プログラミング好な方だ'
+  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
+    frame['asking'] = 'okomari4'   
+    return '愚直に頑張れる'
+  if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' in frame and'okomari5' not in frame:
+    frame['asking'] = 'okomari5'   
+    return ''
+  
+  
 
   if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います
-    number=int(frame['okomari'])+1
+    number=int(frame['okomari'])
+    number2=int(frame['okomari2'])
     if number > 5:
       return number
     return number

@@ -252,7 +252,7 @@ def myuranai(input_text):
   
   if 'ask' in frame and 'ask1' not in frame:
     frame['asking'] = 'ask1'   
-    return '1.当てはまれない 2.わからない 3.当てはまる　該当する数字で答えてね！'
+    return '1.当てはまれない ２.当てはまる　該当する数字で答えてね！'
   
   if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
     frame['asking'] = 'okomari'  
@@ -268,9 +268,7 @@ def myuranai(input_text):
     return '愚直に頑張れる'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' in frame and'okomari5' not in frame:
     frame['asking'] = 'okomari5'   
-    return ''
-  
-  
+    return '就活しんどいぴえん'
 
   if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います

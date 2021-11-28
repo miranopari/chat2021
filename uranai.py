@@ -237,7 +237,7 @@ def run_chat(chat = chat, start='一緒に楽しい予定考えようね！', **
     display_bot(start)
 
 # フレーム 状態をもつ辞書
-# 'name', 'okomari', 'asking','ask','ask1'
+# 'name', 'okomari', 'asking','ask'
 frame = {}
 
 def myuranai(input_text):
@@ -246,13 +246,10 @@ def myuranai(input_text):
     frame[frame['asking']] = input_text
     del frame['asking']
   
-  if 'ask' not in frame:
-    frame['asking'] = 'ask'   
-    return 'いくつか質問に答えてね！今から説明するよ！'
   
-  if 'ask' in frame and 'ask1' not in frame:
-    frame['asking'] = 'ask1'   
-    return '1.当てはまれない ２.当てはまる　該当する数字で答えてね！'
+  if 'ask' in frame and 'ask' not in frame:
+    frame['asking'] = 'ask'   
+    return '1.はい ２.いいえ　数字で僕の質問に答えようね！！'
   
   if 'ask' in frame and 'ask1' in frame and'okomari' not in frame:
     frame['asking'] = 'okomari'  
@@ -265,10 +262,10 @@ def myuranai(input_text):
     return '周りの人と予定が合いそう'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
     frame['asking'] = 'okomari4'   
-    return ''
+    return '晴れそう'
   if 'ask' in frame and 'ask1' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' in frame and'okomari5' not in frame:
     frame['asking'] = 'okomari5'   
-    return ''
+    return 'アウトドア派か'
 
   if 'ask' in frame and 'ask1' in frame and 'okomari' in frame:
     # 占います

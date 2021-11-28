@@ -259,7 +259,7 @@ def myuranai(input_text):
     return 'お金がない'
   if 'ask' in frame and'okomari'in frame and'okomari2' in frame and'okomari3' not in frame:
     frame['asking'] = 'okomari3'   
-    return '周りの人と予定が合いそう'
+    return '周りの人と遊べそう'
   if 'ask' in frame and'okomari'in frame and'okomari2' in frame and'okomari3'in frame and'okomari4' not in frame:
     frame['asking'] = 'okomari4'   
     return '晴れそう'

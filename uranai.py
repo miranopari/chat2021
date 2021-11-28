@@ -14,7 +14,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
 BOT_ICON = 'https://1.bp.blogspot.com/-ewJgNRP7M6w/X4aVa5VK2LI/AAAAAAABbuA/IXWqMxGm2dgQcbgLKLrBKOFkc71CN76WwCNcBGAsYHQ/s703/animal_chara_mogura_hakase.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-JnZBvcSfDYg/WR_Ky4yQsvI/AAAAAAABEZ0/mk6EeaIWXg4vkKjdnhwnimgJHXC77K2XwCLcB/s800/jibun_sagashi_woman.png'
 
-def run_chat(chat = chat, start='進路にお困りかい？', **kw):
+def run_chat(chat = chat, start='君にぴったりの進路を診断するよ！', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
@@ -244,10 +244,6 @@ def myuranai(input_text):
   if 'asking' in frame:  # asking から更新する
     frame[frame['asking']] = input_text
     del frame['asking']
-
-  if 'name' not in frame:
-    frame['asking'] = 'name' # 名前をたずねる  
-    return 'あなたの名前は？'
   
   if 'name' in frame and 'ask' not in frame:
     frame['asking'] = 'ask'   
@@ -263,10 +259,10 @@ def myuranai(input_text):
 
   if 'name' in frame and 'okomari' in frame:
     # 占います
-    
+    number=hash(frame['okomari'])+1
     if number > 5:
-      return 'あなたの運勢は大吉'
-    return 'あなたの運勢は吉'
+      return number
+    return number
 
 def start():
   run_chat(chat=myuranai)    

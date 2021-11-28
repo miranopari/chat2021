@@ -14,7 +14,7 @@ def chat(text, **kw):  #チャット用の関数（ここを書き換える）
 BOT_ICON = 'https://1.bp.blogspot.com/-ewJgNRP7M6w/X4aVa5VK2LI/AAAAAAABbuA/IXWqMxGm2dgQcbgLKLrBKOFkc71CN76WwCNcBGAsYHQ/s703/animal_chara_mogura_hakase.png'
 YOUR_ICON = 'https://4.bp.blogspot.com/-JnZBvcSfDYg/WR_Ky4yQsvI/AAAAAAABEZ0/mk6EeaIWXg4vkKjdnhwnimgJHXC77K2XwCLcB/s800/jibun_sagashi_woman.png'
 
-def run_chat(chat = chat, start='君にぴったりの進路を診断するよ！', **kw):
+def run_chat(chat = chat, start='ぴったりな進路診断するよ！', **kw):
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):

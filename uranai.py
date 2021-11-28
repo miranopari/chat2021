@@ -247,7 +247,7 @@ def myuranai(input_text):
     del frame['asking']
   
   
-  if 'ask' in frame and 'ask' not in frame:
+  if 'ask' not in frame:
     frame['asking'] = 'ask'   
     return '1.はい ２.いいえ　数字でカワウソの質問に答えてね！！'
   

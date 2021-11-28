@@ -19,7 +19,7 @@ def run_chat(chat = chat, start='一緒に楽しい予定考えようね！', **
 
   def display_bot(bot_text):
     with output.redirect_to_element('#output'):
-      bot_name = kw.get('bot_name', '君の味方')
+      bot_name = kw.get('bot_name', 'カワウソ')
       bot_icon = kw.get('bot_icon', BOT_ICON)
       display(IPython.display.HTML(f'''
       <div class="sb-box">
@@ -249,7 +249,7 @@ def myuranai(input_text):
   
   if 'ask' in frame and 'ask' not in frame:
     frame['asking'] = 'ask'   
-    return '1.はい ２.いいえ　数字で僕の質問に答えてね！！'
+    return '1.はい ２.いいえ　数字でカワウソの質問に答えてね！！'
   
   if 'ask' in frame and 'okomari' not in frame:
     frame['asking'] = 'okomari'  
@@ -268,10 +268,24 @@ def myuranai(input_text):
     number=int(frame['okomari'])
     number2=int(frame['okomari2'])
     number3=int(frame['okomari3'])
-    number4=int(frame['okomari4'])
-    if number > 5:
-      return number
-    return number
+    if number ==1 and number2==1 and number3==1:
+      return 'みんなとBBQやキャンプ！カワウソも川でお魚とるのだーいすき！予定まで頑張ろうね！'
+    elif number ==1 and number2==1 and number3==2:
+      return 'みんなとお家でゲームバトル！カワウソはお魚数えゲームをチョイス！予定まで頑張ろうね！'
+    elif number ==1 and number2==2 and number3==1:
+      return 'リーズナブルに一人ランチ！カワウソはお魚ランチにしようかな！予定まで頑張ろうね！'
+    elif number ==1 and number2==2 and number3==2:
+      return 'お家でお気に入りの動画鑑賞！カワウソはカワウソウォーズ見ようかな！予定まで頑張ろうね！'    
+    elif number ==2 and number2==1 and number3==1:
+      return '旅行に出かけてアクテビティにチャレンジ！カワウソは川下りがお気に入り！予定まで頑張ろうね！'  
+    elif number ==2 and number2==1 and number3==2:
+      return '雨でも安心！温泉旅行！カワウソは熱いの苦手ー！予定まで頑張ろうね！'  
+    elif number ==2 and number2==2 and number3==1:
+      return '一人旅やライブに出かけよう！カワウソもライブ参加でアゲアゲ！予定まで頑張ろうね！'  
+    elif number ==2 and number2==2 and number3==2:
+      return '贅沢にショッピング！カワウソはブランド魚買おうかなー！予定まで頑張ろうね！'  
+    else:
+      return 'あれれー答え方が違ったみたいもう一度試してね！'
 
 def start():
   run_chat(chat=myuranai)    
